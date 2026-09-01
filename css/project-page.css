@@ -1,0 +1,2766 @@
+/* =========================================================
+   PROJECT RECORD PAGES
+   ========================================================= */
+
+/* =========================================================
+   PROJECT NAVIGATION
+   ========================================================= */
+
+.project-nav {
+
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    padding: 24px 6%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    border-bottom: 1px solid var(--border);
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+}
+
+.back-link {
+
+    text-decoration: none;
+
+    color: var(--navy);
+
+    transition: color 0.2s ease;
+
+}
+
+.back-link:hover {
+
+    color: var(--red);
+
+}
+
+.project-nav-id {
+
+    color: var(--muted-ink);
+
+}
+
+/* =========================================================
+   PROJECT HERO
+   ========================================================= */
+
+.project-hero {
+
+    padding: 90px 6%;
+
+    background-color: var(--paper);
+
+    position: relative;
+
+}
+
+.project-hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+
+        linear-gradient(
+            rgba(62, 124, 154, 0.08) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(62, 124, 154, 0.08) 1px,
+            transparent 1px
+        );
+
+    background-size: 42px 42px;
+
+    pointer-events: none;
+
+}
+
+.project-hero-grid {
+
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        1.6fr 0.9fr;
+
+    gap: 80px;
+
+    position: relative;
+
+    z-index: 1;
+
+}
+
+.record-label {
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    letter-spacing: 1.5px;
+
+    color: var(--red);
+
+    margin-bottom: 24px;
+
+}
+
+.project-hero h1 {
+
+    font-size: clamp(60px, 8vw, 120px);
+
+    line-height: 0.9;
+
+    font-weight: normal;
+
+    letter-spacing: -3px;
+
+    color: var(--navy);
+
+    margin-bottom: 30px;
+
+}
+
+.project-hero-category {
+
+    display: inline-block;
+
+    border-left: 4px solid var(--blue);
+
+    padding-left: 12px;
+
+    margin-bottom: 28px;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    color: var(--blue);
+
+}
+
+.project-hero-description {
+
+    max-width: 650px;
+
+    font-size: 19px;
+
+    line-height: 1.8;
+
+    color: var(--muted-ink);
+
+    margin-bottom: 32px;
+
+}
+
+.project-hero-status {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    color: var(--green);
+
+}
+
+.status-indicator {
+
+    width: 9px;
+
+    height: 9px;
+
+    border-radius: 50%;
+
+    background-color: var(--green);
+
+}
+
+.project-section {
+    margin-top: 60px;
+}
+
+.project-section-number {
+    width: 46px;
+    height: 46px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 12px;
+}
+
+/* =========================================================
+   SYSTEM SPECIFICATION PANEL
+   ========================================================= */
+
+.project-spec-panel {
+
+    align-self: center;
+
+    border: 1px solid var(--border);
+
+    background-color: var(--paper-light);
+
+}
+
+.spec-panel-header {
+
+    padding: 15px 18px;
+
+    border-bottom: 1px solid var(--border);
+
+    background-color: var(--navy);
+
+    color: var(--paper);
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 9px;
+
+    font-weight: bold;
+
+    letter-spacing: 1.2px;
+
+}
+
+.spec-row {
+
+    padding: 16px 18px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 6px;
+
+    border-bottom: 1px solid var(--grid);
+
+}
+
+.spec-row:last-child {
+
+    border-bottom: none;
+
+}
+
+.spec-row span {
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 8px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    color: var(--muted-ink);
+
+}
+
+.spec-row strong {
+
+    font-size: 15px;
+
+    font-weight: normal;
+
+    color: var(--navy);
+
+}
+
+.active-text {
+
+    color: var(--green) !important;
+
+}
+
+/* =========================================================
+   RECORD SECTIONS
+   ========================================================= */
+
+.project-record-section {
+
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    padding: 100px 6%;
+
+    border-bottom: 1px solid var(--border);
+
+}
+
+.record-section-heading {
+
+    display: flex;
+
+    align-items: baseline;
+
+    gap: 22px;
+
+    margin-bottom: 45px;
+
+}
+
+.record-section-heading span {
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    color: var(--red);
+
+}
+
+.record-section-heading h2 {
+
+    font-size: 36px;
+
+    font-weight: normal;
+
+    letter-spacing: -1px;
+
+    color: var(--navy);
+
+}
+
+.section-description {
+
+    max-width: 720px;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    color: var(--muted-ink);
+
+    margin-top: -20px;
+
+    margin-bottom: 45px;
+
+}
+
+/* =========================================================
+   PROJECT OVERVIEW
+   ========================================================= */
+
+.overview-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        1.5fr 0.7fr;
+
+    gap: 90px;
+
+}
+
+.overview-main {
+
+    max-width: 780px;
+
+}
+
+.overview-main p {
+
+    font-size: 17px;
+
+    line-height: 1.9;
+
+    color: var(--muted-ink);
+
+    margin-bottom: 24px;
+
+}
+
+.overview-main .overview-lead {
+
+    font-size: 24px;
+
+    line-height: 1.6;
+
+    color: var(--navy);
+
+}
+
+.overview-sidebar {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+
+}
+
+.record-note {
+
+    padding: 24px;
+
+    border-left: 4px solid var(--blue);
+
+    background-color: var(--paper-blue);
+
+}
+
+.note-label {
+
+    display: block;
+
+    margin-bottom: 12px;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 9px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    color: var(--blue);
+
+}
+
+.record-note p {
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    color: var(--ink);
+
+}
+
+/* =========================================================
+   SYSTEM ARCHITECTURE
+   ========================================================= */
+
+.architecture-section {
+
+    background-color: var(--paper-light);
+
+}
+
+.architecture-diagram {
+
+    display: flex;
+
+    align-items: stretch;
+
+    justify-content: space-between;
+
+    gap: 14px;
+
+    margin-bottom: 50px;
+
+}
+
+.architecture-block {
+
+    flex: 1;
+
+    min-height: 120px;
+
+    padding: 22px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    border: 1px solid var(--border);
+
+    background-color: var(--paper);
+
+    color: var(--navy);
+
+    font-size: 17px;
+
+    line-height: 1.4;
+
+}
+
+.architecture-highlight {
+
+    border-color: var(--blue);
+
+    box-shadow:
+        5px 5px 0 rgba(62, 124, 154, 0.25);
+
+}
+
+.block-label {
+
+    margin-bottom: 12px;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 8px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    color: var(--blue);
+
+}
+
+.architecture-arrow {
+
+    display: flex;
+
+    align-items: center;
+
+    color: var(--red);
+
+    font-size: 28px;
+
+}
+
+.figure-placeholder {
+
+    height: 400px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    border: 1px solid var(--border);
+
+    background-color: var(--paper);
+
+}
+
+.figure-grid {
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+
+        linear-gradient(
+            rgba(62, 124, 154, 0.12) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(62, 124, 154, 0.12) 1px,
+            transparent 1px
+        );
+
+    background-size: 28px 28px;
+
+}
+
+.figure-label {
+
+    position: absolute;
+
+    top: 18px;
+
+    left: 20px;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 9px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    color: var(--muted-ink);
+
+}
+
+.figure-content {
+
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    color: var(--blue);
+
+}
+
+/* =========================================================
+   DEVELOPMENT RECORD
+   ========================================================= */
+
+.development-timeline {
+
+    border-top: 1px solid var(--border);
+
+}
+
+.development-entry {
+
+    display: grid;
+
+    grid-template-columns:
+        100px 1fr;
+
+    gap: 40px;
+
+    padding: 35px 0;
+
+    border-bottom: 1px solid var(--border);
+
+}
+
+.development-index {
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 24px;
+
+    font-weight: bold;
+
+    color: var(--grid);
+
+}
+
+.development-category {
+
+    display: block;
+
+    margin-bottom: 10px;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 9px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    color: var(--blue);
+
+}
+
+.development-content h3 {
+
+    font-size: 25px;
+
+    font-weight: normal;
+
+    color: var(--navy);
+
+    margin-bottom: 12px;
+
+}
+
+.development-content p {
+
+    max-width: 700px;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
+    color: var(--muted-ink);
+
+}
+
+.current-entry {
+
+    background-color: var(--paper-blue);
+
+}
+
+.current-entry .development-index {
+
+    color: var(--red);
+
+}
+
+/* =========================================================
+   RESULTS
+   ========================================================= */
+
+.results-section {
+
+    background-color: var(--paper);
+
+}
+
+.results-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 35px;
+
+}
+
+.result-figure {
+
+    border: 1px solid var(--border);
+
+    background-color: var(--paper-light);
+
+    padding: 16px;
+
+}
+
+.result-placeholder {
+
+    height: 270px;
+
+    position: relative;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    border: 1px dashed var(--blue);
+
+    background-image:
+
+        linear-gradient(
+            rgba(62, 124, 154, 0.08) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(62, 124, 154, 0.08) 1px,
+            transparent 1px
+        );
+
+    background-size: 24px 24px;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+
+    color: var(--blue);
+
+}
+
+.result-placeholder span {
+
+    position: absolute;
+
+    top: 14px;
+
+    left: 14px;
+
+    font-size: 8px;
+
+    color: var(--red);
+
+}
+
+.result-figure p {
+
+    padding: 14px 4px 4px;
+
+    font-size: 14px;
+
+    color: var(--muted-ink);
+
+}
+
+/* =========================================================
+   PROJECT FIGURES AND IMAGES
+   ========================================================= */
+
+.figure-placeholder img,
+.result-placeholder img {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+}
+
+/* =========================================================
+   ARCHITECTURE IMAGE
+   ========================================================= */
+
+.architecture-figure {
+
+    position: relative;
+
+    border: 1px solid var(--border);
+
+    background-color: var(--paper);
+
+    padding: 20px;
+
+}
+
+.architecture-figure img {
+
+    width: 100%;
+
+    height: auto;
+
+    display: block;
+
+    border: 1px solid var(--border);
+
+}
+
+.architecture-figure .figure-label {
+
+    position: relative;
+
+    top: auto;
+
+    left: auto;
+
+    margin-bottom: 15px;
+
+    display: block;
+
+}
+
+/* =========================================================
+   FUTURE DEVELOPMENT
+   ========================================================= */
+
+.future-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    border-top: 1px solid var(--border);
+
+    border-left: 1px solid var(--border);
+
+}
+
+.future-item {
+
+    padding: 28px;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 18px;
+
+    border-right: 1px solid var(--border);
+
+    border-bottom: 1px solid var(--border);
+
+    font-size: 16px;
+
+    line-height: 1.6;
+
+    color: var(--ink);
+
+}
+
+.future-item span {
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    color: var(--red);
+
+}
+
+/* =========================================================
+   PROJECT FOOTER
+   ========================================================= */
+
+.project-footer {
+
+    padding: 35px 6%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    background-color: var(--navy);
+
+    color: var(--paper);
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+
+}
+
+.footer-return {
+
+    text-decoration: none;
+
+    color: var(--paper);
+
+}
+
+.footer-return:hover {
+
+    color: var(--orange);
+
+}
+
+/* =========================================================
+   TYPOGRAPHY TUNING — READABILITY PASS
+   ========================================================= */
+
+.project-nav { font-size: 11px; }
+.record-label { font-size: 11px; }
+.project-hero-category { font-size: 11px; }
+.project-hero-status { font-size: 11px; }
+.spec-panel-header { font-size: 10px; }
+.spec-row span { font-size: 10px; }
+.spec-row strong { font-size: 16px; }
+.record-section-heading span { font-size: 13px; }
+.note-label { font-size: 10px; }
+.block-label { font-size: 9px; }
+.figure-label { font-size: 10px; }
+.figure-content { font-size: 13px; }
+.development-category { font-size: 10px; }
+.result-placeholder { font-size: 12px; }
+.result-placeholder span { font-size: 9px; }
+.future-item span { font-size: 13px; }
+.project-footer { font-size: 10px; }
+
+/* =========================================================
+   NUMERICAL TOOLS COLLECTION
+   ========================================================= */
+
+.tools-hero {
+    position: relative;
+    padding: 90px 6%;
+    background: var(--paper);
+    overflow: hidden;
+}
+
+.tools-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(62, 124, 154, 0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(62, 124, 154, 0.08) 1px, transparent 1px);
+    background-size: 42px 42px;
+    pointer-events: none;
+}
+
+.tools-hero-grid {
+    position: relative;
+    z-index: 1;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.6fr 0.9fr;
+    gap: 80px;
+}
+
+.tools-hero h1 {
+    margin-bottom: 30px;
+    color: var(--navy);
+    font-size: clamp(52px, 7vw, 105px);
+    font-weight: normal;
+    line-height: 0.92;
+    letter-spacing: -3px;
+}
+
+.tools-hero h1 span {
+    display: block;
+    color: var(--blue);
+}
+
+.tools-hero-category {
+    display: inline-block;
+    margin-bottom: 28px;
+    padding-left: 12px;
+    border-left: 4px solid var(--red);
+    color: var(--blue);
+    font-family: "Courier New", monospace;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.tools-hero-description {
+    max-width: 650px;
+    margin-bottom: 32px;
+    color: var(--muted-ink);
+    font-size: 19px;
+    line-height: 1.8;
+}
+
+.tools-status {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--green);
+    font-family: "Courier New", monospace;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.tools-spec-panel {
+    align-self: center;
+    border: 1px solid var(--border);
+    background: var(--paper-light);
+}
+
+.tools-overview-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 0.7fr;
+    gap: 90px;
+}
+
+.tools-overview-main {
+    max-width: 780px;
+}
+
+.tools-overview-main p {
+    margin-bottom: 24px;
+    color: var(--muted-ink);
+    font-size: 17px;
+    line-height: 1.9;
+}
+
+
+/* =========================================================
+   TOOL CATALOGUE
+   ========================================================= */
+
+.tool-catalogue-section {
+    padding: 100px 6%;
+    background: var(--paper-light);
+    border-bottom: 1px solid var(--border);
+}
+
+.catalogue-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.tool-record {
+    border-top: 1px solid var(--border);
+}
+
+.tool-record:last-child {
+    border-bottom: 1px solid var(--border);
+}
+
+.tool-record-id {
+    padding: 12px 0;
+    color: var(--muted-ink);
+    font-family: "Courier New", monospace;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.tool-record-main {
+    display: grid;
+    grid-template-columns: 80px 1fr auto;
+    gap: 30px;
+    padding: 28px 0 40px;
+}
+
+.tool-number {
+    color: var(--grid);
+    font-family: "Courier New", monospace;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.tool-category {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--blue);
+    font-family: "Courier New", monospace;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.tool-record-content h3 {
+    margin-bottom: 16px;
+    color: var(--navy);
+    font-size: 30px;
+    font-weight: normal;
+}
+
+.tool-equation {
+    display: inline-block;
+    margin-bottom: 18px;
+    padding: 8px 12px;
+    border: 1px solid var(--border);
+    background: var(--paper);
+    color: var(--red);
+    font-family: "Courier New", monospace;
+    font-size: 15px;
+}
+
+.tool-record-content p {
+    max-width: 720px;
+    margin-bottom: 20px;
+    color: var(--muted-ink);
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.tool-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tool-tags span {
+    padding: 6px 9px;
+    border: 1px solid var(--border);
+    background: var(--paper);
+    color: var(--blue);
+    font-family: "Courier New", monospace;
+    font-size: 9px;
+    font-weight: bold;
+    letter-spacing: 0.6px;
+}
+
+.use-tool-button {
+    align-self: center;
+    padding: 13px 18px;
+    border: 1px solid var(--navy);
+    color: var(--navy);
+    background: transparent;
+    text-decoration: none;
+    white-space: nowrap;
+    font-family: "Courier New", monospace;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 0.8px;
+    transition: 0.2s ease;
+}
+
+.use-tool-button:hover {
+    color: var(--paper);
+    background: var(--navy);
+}
+
+
+/* =========================================================
+   COLLECTION DEVELOPMENT
+   ========================================================= */
+
+.collection-development-section {
+    padding: 100px 6%;
+    background: var(--paper);
+    border-bottom: 1px solid var(--border);
+}
+
+.collection-development-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.collection-development-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-top: 1px solid var(--border);
+    border-left: 1px solid var(--border);
+}
+
+.collection-development-item {
+    display: flex;
+    gap: 20px;
+    padding: 30px;
+    border-right: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.development-marker {
+    color: var(--red);
+    font-family: "Courier New", monospace;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.collection-development-item h3 {
+    margin-bottom: 10px;
+    color: var(--navy);
+    font-size: 21px;
+    font-weight: normal;
+}
+
+.collection-development-item p {
+    color: var(--muted-ink);
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* =========================================================
+   GENERIC HOLDING PAGE
+   Coming Soon / Under Development / Under Revision
+========================================================= */
+
+
+/* ---------------------------------------------------------
+   PAGE HEADER
+--------------------------------------------------------- */
+
+.holding-page-header {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 22px 5%;
+
+    border-top: 4px solid var(--blue);
+
+    border-bottom: 1px solid var(--border);
+
+}
+
+
+.holding-page-brand {
+
+    color: var(--navy);
+
+    font-family: "Courier New", monospace;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 1.5px;
+
+}
+
+
+.holding-page-status {
+
+    color: var(--muted-ink);
+
+    font-family: "Courier New", monospace;
+
+    font-size: 9px;
+
+    font-weight: bold;
+
+    letter-spacing: 1.5px;
+
+}
+
+.holding-page-return-bar a {
+
+    color: var(--navy);
+
+    font-family: "Courier New", monospace;
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    text-decoration: none;
+
+    transition: color 0.2s ease;
+
+}
+
+
+.holding-page-return-bar a:hover {
+
+    color: var(--red);
+
+}
+
+
+/* ---------------------------------------------------------
+   MAIN PAGE AREA
+--------------------------------------------------------- */
+
+.coming-soon-page {
+
+    min-height: calc(100vh - 210px);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 70px 5%;
+
+}
+
+
+/* ---------------------------------------------------------
+   MAIN CONTENT PANEL
+--------------------------------------------------------- */
+
+.coming-soon-content {
+
+    width: 100%;
+
+    max-width: 1100px;
+
+    min-height: 460px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 70px 80px;
+
+    box-sizing: border-box;
+
+    border: 1px solid var(--border);
+
+    background:
+
+        linear-gradient(
+            135deg,
+            rgba(35, 82, 137, 0.10),
+            rgba(255, 255, 255, 0.01)
+        );
+
+    text-align: center;
+
+    position: relative;
+
+}
+
+
+/* ---------------------------------------------------------
+   STATUS LABEL
+--------------------------------------------------------- */
+
+.coming-soon-status {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 35px;
+
+    color: var(--blue);
+
+    font-family: "Courier New", monospace;
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    letter-spacing: 1.8px;
+
+}
+
+
+.status-indicator {
+
+    width: 8px;
+
+    height: 8px;
+
+    display: block;
+
+    background: var(--red);
+
+    border-radius: 50%;
+
+}
+
+
+/* ---------------------------------------------------------
+   MAIN TITLE
+--------------------------------------------------------- */
+
+.coming-soon-content h1 {
+
+    margin: 0 0 22px;
+
+    color: var(--navy);
+
+    font-family: Georgia, serif;
+
+    font-size: clamp(48px, 7vw, 88px);
+
+    font-weight: normal;
+
+    line-height: 1;
+
+    letter-spacing: 3px;
+
+}
+
+
+/* ---------------------------------------------------------
+   PAGE / TOOL NAME
+--------------------------------------------------------- */
+
+.coming-soon-content h2 {
+
+    margin: 0 0 28px;
+
+    color: var(--blue);
+
+    font-family: "Courier New", monospace;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    letter-spacing: 1.8px;
+
+}
+
+
+/* ---------------------------------------------------------
+   DESCRIPTION
+--------------------------------------------------------- */
+
+.coming-soon-content p {
+
+    max-width: 520px;
+
+    margin: 0 auto;
+
+    color: var(--muted-ink);
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+}
+
+
+/* ---------------------------------------------------------
+   DECORATIVE DIVIDER
+--------------------------------------------------------- */
+
+.coming-soon-divider {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    margin: 45px 0;
+
+}
+
+
+.coming-soon-divider span {
+
+    width: 9px;
+
+    height: 9px;
+
+    display: block;
+
+    border: 1px solid var(--blue);
+
+}
+
+
+.coming-soon-divider span:nth-child(2) {
+
+    width: 10px;
+
+    height: 10px;
+
+    background: var(--blue);
+
+}
+
+
+.coming-soon-divider span:nth-child(3) {
+
+    border-color: var(--red);
+
+}
+
+
+/* ---------------------------------------------------------
+   RETURN BUTTON
+--------------------------------------------------------- */
+
+.coming-soon-return {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 15px 28px;
+
+    border: 1px solid var(--navy);
+
+    background: var(--navy);
+
+    color: var(--paper);
+
+    font-family: "Courier New", monospace;
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    text-decoration: none;
+
+    transition:
+
+        background 0.2s ease,
+
+        color 0.2s ease,
+
+        transform 0.2s ease;
+
+}
+
+
+.coming-soon-return:hover {
+
+    background: var(--blue);
+
+    border-color: var(--blue);
+
+    transform: translateY(-2px);
+
+}
+
+
+/* ---------------------------------------------------------
+   PAGE FOOTER
+--------------------------------------------------------- */
+
+.holding-page-footer {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 16px;
+
+    padding: 24px 5%;
+
+    border-top: 1px solid var(--border);
+
+    color: var(--muted-ink);
+
+    font-family: "Courier New", monospace;
+
+    font-size: 9px;
+
+    font-weight: bold;
+
+    letter-spacing: 1.5px;
+
+}
+
+
+.footer-divider {
+
+    color: var(--red);
+
+    font-size: 14px;
+
+}
+
+/* =========================================================
+   RC QUADCOPTER PROJECT
+   ========================================================= */
+
+
+/* =========================================================
+   PROJECT HERO
+   ========================================================= */
+
+.rc-hero {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    min-height: 520px;
+}
+
+
+.rc-hero-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 70px;
+}
+
+
+.rc-hero .section-label {
+
+    margin-bottom: 28px;
+
+    color: var(--red);
+
+    font-family: "Courier New", monospace;
+
+    font-size: 10px;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+}
+
+
+.rc-hero h1 {
+
+    margin: 0;
+
+    color: var(--navy);
+
+    font-family: Georgia, serif;
+
+    font-size: clamp(52px, 7vw, 90px);
+
+    font-weight: normal;
+
+    line-height: 0.9;
+
+}
+
+
+.rc-hero .project-subtitle {
+
+    margin-top: 28px;
+
+    color: var(--blue);
+
+    font-family: "Courier New", monospace;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+}
+
+
+.rc-hero .project-introduction {
+
+    max-width: 560px;
+
+    margin-top: 30px;
+
+    color: var(--muted-ink);
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+}
+
+
+/* =========================================================
+   HERO IMAGE
+   ========================================================= */
+
+.project-hero-visual {
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    background: transparent;
+
+}
+
+
+.project-hero-visual img {
+
+    width: 100%;
+    height: auto;
+
+    object-fit: cover;
+
+    display: block;
+
+}
+
+
+.image-label {
+
+    position: absolute;
+
+    bottom: 18px;
+    left: 18px;
+
+    padding: 9px 14px;
+
+    background: var(--navy);
+
+    color: var(--paper);
+
+    font-family: "Courier New", monospace;
+
+    font-size: 9px;
+    font-weight: bold;
+
+    letter-spacing: 1.5px;
+
+}
+
+
+/* =========================================================
+   PROJECT SUMMARY
+   ========================================================= */
+
+.rc-summary-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    margin-top: 35px;
+
+    border: 1px solid var(--border);
+
+}
+
+
+.rc-summary-item {
+
+    min-height: 130px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 25px;
+
+    border-right: 1px solid var(--border);
+
+}
+
+
+.rc-summary-item:last-child {
+
+    border-right: none;
+
+}
+
+
+.rc-summary-item span {
+
+    margin-bottom: 12px;
+
+    color: var(--muted-ink);
+
+    font-family: "Courier New", monospace;
+
+    font-size: 9px;
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+}
+
+
+.rc-summary-item strong {
+
+    color: var(--navy);
+
+    font-family: Georgia, serif;
+
+    font-size: 18px;
+
+    font-weight: normal;
+
+}
+
+.project-page {
+    width: min(1200px, calc(100% - 160px));
+    margin: 0 auto;
+}
+
+/* =========================================================
+   SYSTEM OVERVIEW
+   ========================================================= */
+
+/* SECTION HEADING */
+
+.section-heading {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 18px;
+}
+
+.section-number {
+    width: 44px;
+    height: 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--red);
+    color: var(--paper);
+
+    font-family: "Courier New", monospace;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.section-heading h2 {
+    margin: 0;
+
+    color: var(--navy);
+    font-family: Georgia, serif;
+    font-size: 28px;
+    letter-spacing: 0.5px;
+}
+
+   .rc-system-overview {
+    display: grid;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.system-description {
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--muted-ink);
+}
+
+.system-description p:first-child {
+    margin-top: 0;
+}
+
+.system-diagram {
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    padding: 80px;
+
+    border: 1px solid var(--border);
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(35, 82, 137, 0.05),
+            rgba(44, 107, 91, 0.04)
+        );
+
+    margin-top: 5px;
+}
+
+
+.system-block {
+
+    min-width: 115px;
+
+    min-height: 100px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 15px;
+
+    text-align: center;
+
+    border: 1px solid var(--border);
+
+    background: var(--paper);
+
+    transform: translateY(-60px);
+
+}
+
+
+.system-block span {
+
+    margin-bottom: 8px;
+
+    color: var(--red);
+
+    font-family: "Courier New", monospace;
+
+    font-size: 9px;
+    font-weight: bold;
+
+}
+
+
+.system-block strong {
+
+    color: var(--navy);
+
+    font-family: "Courier New", monospace;
+
+    font-size: 10px;
+
+    line-height: 1.5;
+
+}
+
+
+.system-arrow {
+
+    color: var(--red);
+
+    font-size: 22px;
+    transform: translateY(-60px);
+
+}
+
+/* ARDUINO + IMU GROUP */
+
+.controller-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    border: none;
+    background: transparent;
+    transform: translateY(65px);
+}
+
+.imu-block {
+    position: relative;
+}
+
+.imu-block::before {
+    content: "↑";
+
+    position: absolute;
+    top: -30px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    color: var(--red);
+    font-size: 22px;
+}
+
+.controller-group .controller-block,
+.controller-group .imu-block {
+    width: 115px;
+    height: 100px;
+
+    box-sizing: border-box;
+}
+
+.controller-block {
+    background: var(--navy);
+
+}
+
+
+.controller-block span,
+.controller-block strong {
+
+    color: var(--paper);
+
+}
+
+
+.imu-block {
+
+    margin-top: 12px;
+
+    background: var(--green);
+
+}
+
+
+.imu-block span,
+.imu-block strong {
+
+    color: var(--paper);
+
+}
+
+
+.imu-feedback {
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+}
+
+
+.vertical-arrow {
+
+    margin-bottom: 5px;
+
+}
+
+
+/* =========================================================
+   HARDWARE CONFIGURATION
+   ========================================================= */
+
+.hardware-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    border-top: 1px solid var(--border);
+    border-left: 1px solid var(--border);
+
+}
+
+
+.hardware-card {
+
+    min-height: 220px;
+
+    padding: 30px;
+
+    border-right: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+
+    transition: background 0.2s ease;
+
+}
+
+
+.hardware-card:hover {
+
+    background: var(--paper-light);
+
+}
+
+
+.hardware-id {
+
+    display: inline-block;
+
+    margin-bottom: 25px;
+
+    color: var(--red);
+
+    font-family: "Courier New", monospace;
+
+    font-size: 9px;
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+}
+
+
+.hardware-card h3 {
+
+    margin: 0 0 16px 0;
+
+    color: var(--navy);
+
+    font-family: Georgia, serif;
+
+    font-size: 22px;
+
+    font-weight: normal;
+
+}
+
+
+.hardware-card p {
+
+    margin: 0;
+
+    color: var(--muted-ink);
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+}
+
+
+/* =========================================================
+   CIRCUIT INTEGRATION
+   ========================================================= */
+
+.rc-circuit-layout {
+
+    display: grid;
+
+    grid-template-columns: 1.2fr 0.8fr;
+
+    border: 1px solid var(--border);
+
+}
+
+
+.circuit-image-container {
+
+    position: relative;
+
+    min-height: 500px;
+
+    border-right: 1px solid var(--border);
+
+    background: var(--paper-light);
+
+}
+
+
+.circuit-image-container img {
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: contain;
+
+    padding: 25px;
+
+    box-sizing: border-box;
+
+}
+
+
+.circuit-description {
+
+    padding: 45px;
+
+}
+
+
+.circuit-description h3 {
+
+    margin: 0 0 35px 0;
+
+    color: var(--navy);
+
+    font-family: Georgia, serif;
+
+    font-size: 26px;
+
+    font-weight: normal;
+
+}
+
+
+.signal-list {
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 28px;
+
+}
+
+
+.signal-item {
+
+    display: grid;
+
+    grid-template-columns: 45px 1fr;
+
+    gap: 20px;
+
+}
+
+
+.signal-item span {
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 38px;
+    height: 38px;
+
+    border: 1px solid var(--red);
+
+    color: var(--red);
+
+    font-family: "Courier New", monospace;
+
+    font-size: 10px;
+    font-weight: bold;
+
+}
+
+
+.signal-item p {
+
+    margin: 0;
+
+    color: var(--muted-ink);
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+}
+
+
+/* =========================================================
+   ASSEMBLY PROCESS
+   ========================================================= */
+
+.assembly-timeline {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    border-top: 1px solid var(--border);
+    border-left: 1px solid var(--border);
+
+}
+
+
+.assembly-step {
+
+    display: grid;
+
+    grid-template-columns: 100px 1fr;
+
+    min-height: 180px;
+
+    border-right: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+
+}
+
+
+.step-number {
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-right: 1px solid var(--border);
+
+    background: var(--paper-light);
+
+    color: var(--red);
+
+    font-family: Georgia, serif;
+
+    font-size: 30px;
+
+}
+
+
+.step-content {
+
+    padding: 32px;
+
+}
+
+
+.step-content h3 {
+
+    margin: 0 0 15px 0;
+
+    color: var(--navy);
+
+    font-family: Georgia, serif;
+
+    font-size: 21px;
+
+    font-weight: normal;
+
+}
+
+
+.step-content p {
+
+    margin: 0;
+
+    color: var(--muted-ink);
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+}
+
+
+/* =========================================================
+   AUTO LEVELLING CONTROL SYSTEM
+   ========================================================= */
+
+.control-system-layout {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+
+}
+
+
+.control-description {
+
+    color: var(--muted-ink);
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+}
+
+
+.control-description p:first-child {
+
+    margin-top: 0;
+
+}
+
+
+.control-loop {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    padding: 45px;
+
+    border: 1px solid var(--border);
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(35, 82, 137, 0.05),
+            rgba(44, 107, 91, 0.05)
+        );
+
+}
+
+
+.control-block {
+
+    width: 230px;
+
+    padding: 16px;
+
+    text-align: center;
+
+    border: 1px solid var(--border);
+
+    background: var(--paper);
+
+    color: var(--navy);
+
+    font-family: "Courier New", monospace;
+
+    font-size: 10px;
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+}
+
+
+.controller-block {
+
+    background: var(--navy);
+
+    color: var(--paper);
+
+}
+
+
+.motor-block {
+
+    background: var(--blue);
+
+    color: var(--paper);
+
+}
+
+
+.vehicle-block {
+
+    background: var(--green);
+
+    color: var(--paper);
+
+}
+
+
+.control-arrow {
+
+    margin: 7px 0;
+
+    color: var(--red);
+
+    font-size: 22px;
+
+}
+
+
+.feedback-loop {
+
+    margin-top: 25px;
+
+    padding: 10px 18px;
+
+    border: 1px dashed var(--green);
+
+    color: var(--green);
+
+    font-family: "Courier New", monospace;
+
+    font-size: 9px;
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+}
+
+
+/* =========================================================
+   SOFTWARE ATTRIBUTION
+   ========================================================= */
+
+.attribution-section {
+
+    padding-bottom: 0;
+
+}
+
+
+.software-attribution {
+
+    display: grid;
+
+    grid-template-columns: 120px 1fr;
+
+    gap: 35px;
+
+    padding: 45px;
+
+    border: 1px solid var(--border);
+
+    background: var(--paper-light);
+
+}
+
+
+.attribution-marker {
+
+    display: flex;
+
+    align-items: flex-start;
+    justify-content: center;
+
+    color: var(--red);
+
+    font-family: Georgia, serif;
+
+    font-size: 55px;
+
+}
+
+
+.software-attribution h3 {
+
+    margin: 0 0 20px 0;
+
+    color: var(--navy);
+
+    font-family: Georgia, serif;
+
+    font-size: 25px;
+
+    font-weight: normal;
+
+}
+
+
+.software-attribution p {
+
+    max-width: 850px;
+
+    color: var(--muted-ink);
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+}
+
+
+.attribution-note {
+
+    padding-top: 15px;
+
+    border-top: 1px solid var(--border);
+
+    color: var(--red) !important;
+
+    font-family: "Courier New", monospace;
+
+    font-size: 11px !important;
+
+}
+
+
+/* =========================================================
+   PROJECT DOCUMENTATION
+   ========================================================= */
+
+.rc-documentation-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    border: 1px solid var(--border);
+
+}
+
+
+.documentation-card {
+
+    min-height: 180px;
+
+    display: flex;
+
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 30px;
+
+    border-right: 1px solid var(--border);
+
+}
+
+
+.documentation-card:last-child {
+
+    border-right: none;
+
+}
+
+
+.documentation-card span {
+
+    margin-bottom: 20px;
+
+    color: var(--red);
+
+    font-family: "Courier New", monospace;
+
+    font-size: 9px;
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+}
+
+
+.documentation-card strong {
+
+    color: var(--navy);
+
+    font-family: Georgia, serif;
+
+    font-size: 21px;
+
+    font-weight: normal;
+
+    line-height: 1.4;
+
+}
+
+
+.documentation-card p {
+
+    margin: 18px 0 0 0;
+
+    color: var(--muted-ink);
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+}
+
+
+.future-documentation {
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(176, 79, 64, 0.06),
+            rgba(35, 82, 137, 0.04)
+        );
+
+}
+
+
+/* =========================================================
+   RC QUADCOPTER FOOTER
+   ========================================================= */
+
+.project-footer {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-top: 80px;
+
+    padding: 25px 0;
+
+    border-top: 1px solid var(--border);
+
+    color: var(--muted-ink);
+
+    font-family: "Courier New", monospace;
+
+    font-size: 9px;
+
+    font-weight: bold;
+
+    letter-spacing: 1.5px;
+
+}

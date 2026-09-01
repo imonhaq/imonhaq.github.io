@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>RC Quadcopter | IMH Engineering</title>
+
+    <!-- GLOBAL STYLES -->
+
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/navigation.css">
+    <link rel="stylesheet" href="../css/project-page.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================================
+         PAGE HEADER
+    ========================================================== -->
+
+    <!-- =====================================================
+         PROJECT NAVIGATION
+    ====================================================== -->
+
+    <nav class="project-nav">
+
+        <a
+            href="../index.html#projects"
+            class="back-link"
+        >
+            ← RETURN TO ARCHIVE
+        </a>
+
+
+        <div class="project-nav-id">
+
+            IMH / PROJECT RECORD / 002
+
+        </div>
+
+    </nav>
+
+
+    <!-- =========================================================
+         PROJECT HERO
+    ========================================================== -->
+
+    <main class="project-page">
+
+
+        <section class="rc-hero">
+
+            <div class="rc-hero-info">
+
+                <div class="section-label">
+                    UAV / EMBEDDED SYSTEMS
+                </div>
+
+                <h1>
+                    RC<br>
+                    QUADCOPTER
+                </h1>
+
+                <div class="project-subtitle">
+                    Arduino-Based Auto-Levelling Flight Controller
+                </div>
+
+                <p class="project-introduction">
+
+                    Development and assembly of a 450-size quadcopter
+                    incorporating an Arduino-based flight controller with
+                    inertial sensor feedback for attitude stabilisation.
+                    The project involved electronic integration, flight
+                    controller installation, calibration, transmitter
+                    configuration and system testing.
+
+                </p>
+
+            </div>
+
+
+            <div class="project-hero-visual">
+
+                <!-- REPLACE IMAGE PATH WITH YOUR ACTUAL IMAGE -->
+
+                <img
+                    src="../images/quadcopter-top-view.jpg"
+                    alt="Top view of assembled RC quadcopter"
+                >
+
+                <div class="image-label">
+                    ASSEMBLED QUADCOPTER
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             PROJECT SUMMARY
+        ====================================================== -->
+
+        <section class="rc-summary-grid">
+
+            <div class="rc-summary-item">
+
+                <span>PROJECT TYPE</span>
+
+                <strong>
+                    UAV SYSTEM
+                </strong>
+
+            </div>
+
+
+            <div class="rc-summary-item">
+
+                <span>PRIMARY ROLE</span>
+
+                <strong>
+                    ASSEMBLY & INTEGRATION
+                </strong>
+
+            </div>
+
+
+            <div class="rc-summary-item">
+
+                <span>CONTROLLER</span>
+
+                <strong>
+                    ARDUINO-BASED
+                </strong>
+
+            </div>
+
+
+            <div class="rc-summary-item">
+
+                <span>STATUS</span>
+
+                <strong>
+                    COMPLETED
+                </strong>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             SYSTEM OVERVIEW
+        ====================================================== -->
+
+        <section class="project-section">
+
+            <div class="section-heading">
+
+                <span class="section-number">
+                    01
+                </span>
+
+                <h2>
+                    SYSTEM OVERVIEW
+                </h2>
+
+            </div>
+
+
+            <div class="rc-system-overview">
+
+
+                <div class="system-description">
+
+                    <p>
+
+                        The quadcopter system combines radio-control
+                        commands with inertial sensor feedback to stabilise
+                        the vehicle during operation.
+                        Control commands from the transmitter are received
+                        by the onboard receiver and processed by the Arduino
+                        flight controller. Attitude measurements from the
+                        IMU are used by the controller to determine the
+                        required corrections before generating motor commands
+                        for the four electronic speed controllers.
+
+                    </p>
+
+                </div>
+
+
+                <div class="system-diagram">
+
+
+                    <div class="system-block transmitter">
+
+                        <span>01</span>
+
+                        <strong>
+                            FLYSKY<br>
+                            TRANSMITTER
+                        </strong>
+
+                    </div>
+
+
+                    <div class="system-arrow">
+                        →
+                    </div>
+
+
+                    <div class="system-block receiver">
+
+                        <span>02</span>
+
+                        <strong>
+                            RC RECEIVER
+                        </strong>
+
+                    </div>
+
+
+                    <div class="system-arrow">
+                        →
+                    </div>
+
+
+                    <div class="controller-group">
+
+                        <div class="system-block controller-block">
+                            <span>03</span>
+                            <strong>ARDUINO<br>CONTROLLER</strong>
+                        </div>
+
+                        <div class="system-block imu-block">
+                            <span>IMU</span>
+                            <strong>ATTITUDE<br>FEEDBACK</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="system-arrow">
+                        →
+                    </div>
+
+
+                    <div class="system-block esc">
+
+                        <span>04</span>
+
+                        <strong>
+                            ESC × 4
+                        </strong>
+
+                    </div>
+
+
+                    <div class="system-arrow">
+                        →
+                    </div>
+
+
+                    <div class="system-block motors">
+
+                        <span>05</span>
+
+                        <strong>
+                            BRUSHLESS<br>
+                            MOTORS × 4
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             HARDWARE CONFIGURATION
+        ====================================================== -->
+
+        <section class="project-section">
+
+            <div class="section-heading">
+
+                <span class="section-number">
+                    02
+                </span>
+
+                <h2>
+                    HARDWARE CONFIGURATION
+                </h2>
+
+            </div>
+
+
+            <div class="hardware-grid">
+
+
+                <div class="hardware-card">
+
+                    <span class="hardware-id">
+                        STRUCTURE
+                    </span>
+
+                    <h3>
+                        450 SIZE FRAME
+                    </h3>
+
+                    <p>
+                        Quadrotor airframe used as the structural platform
+                        for the propulsion and electronics systems.
+                    </p>
+
+                </div>
+
+
+                <div class="hardware-card">
+
+                    <span class="hardware-id">
+                        PROPULSION
+                    </span>
+
+                    <h3>
+                        4 × 1200 kV MOTORS
+                    </h3>
+
+                    <p>
+                        Brushless motors paired with 10 × 4.5 propellers
+                        and electronic speed controllers.
+                    </p>
+
+                </div>
+
+
+                <div class="hardware-card">
+
+                    <span class="hardware-id">
+                        POWER
+                    </span>
+
+                    <h3>
+                        3S LiPo BATTERY
+                    </h3>
+
+                    <p>
+                        2200 mAh, 20C lithium-polymer battery supplying
+                        the propulsion system.
+                    </p>
+
+                </div>
+
+
+                <div class="hardware-card">
+
+                    <span class="hardware-id">
+                        CONTROLLER
+                    </span>
+
+                    <h3>
+                        ARDUINO UNO
+                    </h3>
+
+                    <p>
+                        Microcontroller used for flight-control processing
+                        and integration with the receiver and IMU.
+                    </p>
+
+                </div>
+
+
+                <div class="hardware-card">
+
+                    <span class="hardware-id">
+                        INERTIAL SENSOR
+                    </span>
+
+                    <h3>
+                        IMU MODULE
+                    </h3>
+
+                    <p>
+                        Gyroscope and accelerometer-based sensor module
+                        used to provide vehicle attitude information.
+                    </p>
+
+                </div>
+
+
+                <div class="hardware-card">
+
+                    <span class="hardware-id">
+                        RADIO CONTROL
+                    </span>
+
+                    <h3>
+                        FLYSKY FS-i6
+                    </h3>
+
+                    <p>
+                        Six-channel transmitter used to provide pilot
+                        control commands to the flight controller.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             CIRCUIT INTEGRATION
+        ====================================================== -->
+
+        <section class="project-section">
+
+            <div class="section-heading">
+
+                <span class="section-number">
+                    03
+                </span>
+
+                <h2>
+                    ELECTRONICS & CIRCUIT INTEGRATION
+                </h2>
+
+            </div>
+
+
+            <div class="rc-circuit-layout">
+
+
+                <div class="circuit-image-container">
+
+                    <img
+                        src="../images/quadcopter-circuit.png"
+                        alt="RC quadcopter flight controller circuit diagram"
+                    >
+
+                    <div class="image-label">
+                        FLIGHT CONTROLLER CIRCUIT
+                    </div>
+
+                </div>
+
+
+                <div class="circuit-description">
+
+
+                    <h3>
+                        SIGNAL INTEGRATION
+                    </h3>
+
+
+                    <div class="signal-list">
+
+
+                        <div class="signal-item">
+
+                            <span>01</span>
+
+                            <p>
+                                The IMU provides gyroscope and accelerometer
+                                measurements to the Arduino flight controller.
+                            </p>
+
+                        </div>
+
+
+                        <div class="signal-item">
+
+                            <span>02</span>
+
+                            <p>
+                                Receiver channels provide pilot commands from
+                                the FlySky transmitter.
+                            </p>
+
+                        </div>
+
+
+                        <div class="signal-item">
+
+                            <span>03</span>
+
+                            <p>
+                                The Arduino processes control inputs and
+                                sensor feedback to determine motor commands.
+                            </p>
+
+                        </div>
+
+
+                        <div class="signal-item">
+
+                            <span>04</span>
+
+                            <p>
+                                Output signals are sent to four electronic
+                                speed controllers which regulate the
+                                brushless motors.
+                            </p>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             ASSEMBLY PROCESS
+        ====================================================== -->
+
+        <section class="project-section">
+
+            <div class="section-heading">
+
+                <span class="section-number">
+                    04
+                </span>
+
+                <h2>
+                    ASSEMBLY & DEVELOPMENT PROCESS
+                </h2>
+
+            </div>
+
+
+            <div class="assembly-timeline">
+
+
+                <div class="assembly-step">
+
+                    <div class="step-number">
+                        01
+                    </div>
+
+                    <div class="step-content">
+
+                        <h3>
+                            FRAME ASSEMBLY
+                        </h3>
+
+                        <p>
+                            Assembly of the 450-size quadcopter frame and
+                            installation of the propulsion components.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="assembly-step">
+
+                    <div class="step-number">
+                        02
+                    </div>
+
+                    <div class="step-content">
+
+                        <h3>
+                            MOTOR & ESC INSTALLATION
+                        </h3>
+
+                        <p>
+                            Installation and connection of the brushless
+                            motors, propellers and electronic speed
+                            controllers.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="assembly-step">
+
+                    <div class="step-number">
+                        03
+                    </div>
+
+                    <div class="step-content">
+
+                        <h3>
+                            FLIGHT ELECTRONICS
+                        </h3>
+
+                        <p>
+                            Integration of the Arduino controller, IMU
+                            sensor and radio receiver into the airframe.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="assembly-step">
+
+                    <div class="step-number">
+                        04
+                    </div>
+
+                    <div class="step-content">
+
+                        <h3>
+                            CONTROLLER CONFIGURATION
+                        </h3>
+
+                        <p>
+                            Uploading and configuring the flight-control
+                            software for the Arduino-based controller.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="assembly-step">
+
+                    <div class="step-number">
+                        05
+                    </div>
+
+                    <div class="step-content">
+
+                        <h3>
+                            SENSOR CALIBRATION
+                        </h3>
+
+                        <p>
+                            Calibration of the inertial sensor and verification
+                            of sensor orientation and response.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="assembly-step">
+
+                    <div class="step-number">
+                        06
+                    </div>
+
+                    <div class="step-content">
+
+                        <h3>
+                            SYSTEM TESTING
+                        </h3>
+
+                        <p>
+                            Verification of motor response, control inputs,
+                            sensor feedback and overall system behaviour.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             CONTROL SYSTEM
+        ====================================================== -->
+
+        <section class="project-section">
+
+            <div class="section-heading">
+
+                <span class="section-number">
+                    05
+                </span>
+
+                <h2>
+                    AUTO-LEVELLING CONTROL SYSTEM
+                </h2>
+
+            </div>
+
+
+            <div class="control-system-layout">
+
+
+                <div class="control-description">
+
+                    <p>
+
+                        The auto-levelling system uses inertial measurements
+                        to estimate the attitude of the quadcopter. The
+                        measured orientation is compared with the commanded
+                        attitude from the pilot.
+
+                    </p>
+
+                    <p>
+
+                        Any difference between the desired and measured
+                        attitude produces a correction command which is used
+                        to modify the motor outputs and stabilise the vehicle.
+
+                    </p>
+
+                </div>
+
+
+                <div class="control-loop">
+
+
+                    <div class="control-block">
+                        PILOT COMMAND
+                    </div>
+
+                    <div class="control-arrow">
+                        ↓
+                    </div>
+
+                    <div class="control-block controller-block">
+                        FLIGHT CONTROLLER
+                    </div>
+
+                    <div class="control-arrow">
+                        ↓
+                    </div>
+
+                    <div class="control-block motor-block">
+                        MOTOR OUTPUT
+                    </div>
+
+                    <div class="control-arrow">
+                        ↓
+                    </div>
+
+                    <div class="control-block vehicle-block">
+                        QUADCOPTER
+                    </div>
+
+                    <div class="feedback-loop">
+                        IMU FEEDBACK ↑
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             SOFTWARE ATTRIBUTION
+        ====================================================== -->
+
+        <section class="project-section attribution-section">
+
+            <div class="section-heading">
+
+                <span class="section-number">
+                    06
+                </span>
+
+                <h2>
+                    SOFTWARE ATTRIBUTION
+                </h2>
+
+            </div>
+
+
+            <div class="software-attribution">
+
+
+                <div class="attribution-marker">
+                    ⌘
+                </div>
+
+
+                <div>
+
+                    <h3>
+                        OPEN-SOURCE FLIGHT CONTROL SOFTWARE
+                    </h3>
+
+                    <p>
+
+                        The flight-control software used in this project was
+                        based on an open-source implementation developed by
+                        an independent creator.
+
+                    </p>
+
+                    <p>
+
+                        My contribution focused on the physical implementation
+                        of the system, including circuit construction,
+                        electronic integration, quadcopter assembly,
+                        controller installation, calibration and testing.
+
+                    </p>
+
+                    <p class="attribution-note">
+
+                        The original flight-control source code is not
+                        reproduced or redistributed as part of this project
+                        archive.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             PROJECT MEDIA
+        ====================================================== -->
+
+        <section class="project-section">
+
+            <div class="section-heading">
+
+                <span class="section-number">
+                    07
+                </span>
+
+                <h2>
+                    PROJECT DOCUMENTATION
+                </h2>
+
+            </div>
+
+
+            <div class="rc-documentation-grid">
+
+
+                <div class="documentation-card">
+
+                    <span>
+                        IMAGE / 01
+                    </span>
+
+                    <strong>
+                        ASSEMBLED QUADCOPTER
+                    </strong>
+
+                </div>
+
+
+                <div class="documentation-card">
+
+                    <span>
+                        DIAGRAM / 02
+                    </span>
+
+                    <strong>
+                        FLIGHT CONTROLLER CIRCUIT
+                    </strong>
+
+                </div>
+
+
+                <div class="documentation-card future-documentation">
+
+                    <span>
+                        FUTURE / 03
+                    </span>
+
+                    <strong>
+                        FLIGHT TEST DOCUMENTATION
+                    </strong>
+
+                    <p>
+                        Additional flight testing imagery and documentation
+                        will be added during future testing sessions.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =========================================================
+         FOOTER
+    ========================================================== -->
+
+    <footer class="project-footer">
+
+        <span>
+            IMH ENGINEERING ARCHIVE
+        </span>
+
+        <span>
+            PROJECT RECORD / 002
+        </span>
+
+        <span>
+            RC QUADCOPTER
+        </span>
+
+    </footer>
+
+
+</body>
+
+</html>

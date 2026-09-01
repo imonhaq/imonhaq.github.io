@@ -1,0 +1,685 @@
+/* ENGINEERING TOOLS */
+
+.tool-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 6%;
+    border-bottom: 1px solid var(--border);
+    background: var(--paper);
+}
+
+.tool-nav-id {
+    color: var(--muted-ink);
+    font-family: "Courier New", monospace;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.tool-page {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 80px 6%;
+}
+
+.tool-header {
+    max-width: 850px;
+    margin-bottom: 70px;
+}
+
+.tool-header-label {
+    margin-bottom: 18px;
+    padding-left: 12px;
+    border-left: 4px solid var(--red);
+    color: var(--blue);
+    font-family: "Courier New", monospace;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.tool-header h1 {
+    margin-bottom: 20px;
+    color: var(--navy);
+    font-size: clamp(42px, 6vw, 76px);
+    font-weight: normal;
+    line-height: 1;
+    letter-spacing: -2px;
+}
+
+.tool-header p {
+    margin-bottom: 24px;
+    color: var(--muted-ink);
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+/*.tool-formula {
+    display: inline-block;
+    padding: 14px 20px;
+    border: 1px solid var(--border);
+    background: var(--paper-light);
+    color: var(--red);
+    font-family: "Courier New", monospace;
+    font-size: 21px;
+}*/
+
+/* TOOL WORKSPACE */
+
+.tool-workspace {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    min-height: 550px;
+    border: 1px solid var(--border);
+}
+
+.tool-input-panel, .tool-output-panel {
+    display: flex;
+    flex-direction: column;
+    padding: 35px;
+}
+
+.tool-input-panel {
+    border-right: 1px solid var(--border);
+}
+
+.panel-header {
+    margin-bottom: 35px;
+    color: var(--navy);
+    font-family: "Courier New", monospace;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.input-grid {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    row-gap: 20px;
+}
+
+.input-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.input-field label {
+    color: var(--navy);
+    font-family: "Courier New", monospace;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 0.8px;
+}
+
+.coef-letter {
+    color: var(--red);
+    font-style: italic;
+    font-weight: bold;
+}
+
+.input-field input, .matrix-row input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 13px;
+    border: 1px solid var(--border);
+    outline: none;
+    background: rgba(121, 140, 161, 0.082);
+    color: var(--ink);
+    font-family: "Courier New", monospace;
+    font-size: 15px;
+}
+
+.input-field input:focus, .matrix-row input:focus {
+    border-color: var(--blue);
+}
+
+.tool-action-button {
+    margin-top: auto;
+    align-self: flex-start;
+    padding: 14px 20px;
+    border: 1px solid var(--navy);
+    background: var(--navy);
+    color: var(--paper);
+    cursor: pointer;
+    font-family: "Courier New", monospace;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.tool-action-button:hover {
+    background: var(--red);
+}
+
+/* OUTPUT PANELS */
+
+.output-placeholder {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.output-placeholder-symbol {
+    margin-bottom: 18px;
+    font-family: Georgia, serif;
+    font-size: 55px;
+    color:    rgba(37, 59, 80, 0.18);
+}
+
+.output-placeholder-content span {
+    display: block;
+    margin-bottom: 10px;
+    font-family: "Courier New", monospace;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    color: var(--rust);
+}
+
+.output-placeholder-content p {
+    max-width: 280px;
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--muted-ink);
+}
+
+/* TOOL INFORMATION */
+
+.tool-information {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 50px;
+    border-top: 1px solid var(--border);
+    border-left: 1px solid var(--border);
+}
+
+.tool-info-block {
+    padding: 28px;
+    border-right: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.tool-info-block span {
+    display: block;
+    margin-bottom: 14px;
+    color: var(--blue);
+    font-family: "Courier New", monospace;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.tool-info-block p {
+    margin: 0;
+    color: var(--muted-ink);
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* AIRFOIL TOOL */
+
+.airfoil-inputs {
+    display: grid;
+    gap: 20px;
+}
+
+.naca-reference {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    gap: 10px 15px;
+    margin-top: 28px;
+    color: var(--muted-ink);
+    font-size: 13px;
+}
+
+.naca-reference span {
+    color: var(--red);
+    font-family: "Courier New", monospace;
+    font-weight: bold;
+}
+
+.airfoil-placeholder {
+    position: relative;
+    flex: 1;
+    min-height: 300px;
+    border: 1px dashed var(--border);
+    overflow: hidden;
+}
+
+.airfoil-axis {
+    position: absolute;
+    background: var(--grid);
+}
+
+.airfoil-axis.horizontal {
+    top: 50%;
+    left: 10%;
+    width: 80%;
+    height: 1px;
+}
+
+.airfoil-axis.vertical {
+    top: 15%;
+    left: 15%;
+    width: 1px;
+    height: 70%;
+}
+
+.airfoil-shape {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--muted-ink);
+    font-family: "Courier New", monospace;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+/* JACOBI TOOL */
+
+.matrix-placeholder {
+    display: grid;
+    gap: 10px;
+}
+
+.matrix-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.jacobi-options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    margin-top: 25px;
+}
+
+/* TOOL FOOTER */
+
+.tool-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 28px 6%;
+    border-top: 1px solid var(--border);
+    color: var(--muted-ink);
+    font-family: "Courier New", monospace;
+    font-size: 12px;
+    letter-spacing: 0.8px;
+}
+
+.tool-footer a {
+    color: var(--red);
+    text-decoration: none;
+}
+
+/*  CUBIC SOLVER — PANEL HEADERS */
+
+.tool-input-panel > .panel-header,
+.tool-output-panel > .panel-header {
+    display: flex;
+    align-items: center;
+    border-left: 4px solid var(--red);
+    min-height: 30px;
+    padding: 0 18px;
+    margin: 0 0 20px 0;
+    color: var(--navy);
+    font-family: "Courier New", monospace;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* CUBIC SOLVER — EQUATION DISPLAY */
+
+.tool-formula {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 22px auto 32px;
+    padding: 20px 38px;
+    border-left: 6px solid var(--red);
+    /*border-right: 1px solid var(--border);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);*/
+    background:
+        linear-gradient(
+            90deg,
+            rgba(176, 79, 64, 0.16),
+            rgba(176, 79, 64, 0.03)
+        );
+    color: var(--navy);
+    font-family: Georgia, serif;
+    font-size: 34px;
+}
+
+/* CUBIC SOLVER RESULTS */
+
+.solver-result-display {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* RESULT HEADER */
+
+.solver-result-header {
+    text-align: center;
+    margin: 0 0 20px 0;
+    padding: 8px 0 16px;
+    border-bottom: 1px solid var(--border);
+}
+
+.result-equation-type {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--red);
+    font-family: "Courier New", monospace;
+    font-size: 9px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.solver-result-header h3 {
+    margin: 0;
+    color: var(--navy);
+    font-family: Georgia, serif;
+    font-size: 24px;
+    font-weight: normal;
+    line-height: 1.35;
+    letter-spacing: 0.5px;
+}
+
+/* ROOT LIST */
+
+.result-roots {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* ROOT CARD */
+
+.result-root-card {
+    min-height: 86px;
+    display: grid;
+    grid-template-columns: 92px 1fr;
+    border: 1px solid var(--border);
+    background-color: var(--paper-light);
+}
+
+/* ROOT NUMBER PANEL */
+
+.result-root-number {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid var(--border);
+}
+
+.result-root-number span {
+    margin-bottom: 5px;
+    color: var(--muted-ink);
+    font-family: "Courier New", monospace;
+    font-size: 8px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.result-root-number strong {
+    color: var(--navy);
+    font-family: "Courier New", monospace;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+/* ROOT CONTENT */
+
+.result-root-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 14px 22px;
+}
+
+.result-root-value {
+    color: var(--navy);
+    font-family: Georgia, serif;
+    font-size: 25px;
+    line-height: 1.2;
+    white-space: nowrap;
+}
+
+.result-root-type {
+    display: inline-flex;
+    align-items: center;
+    align-self: flex-start;
+    margin-top: 9px;
+    padding: 5px 9px;
+    font-family: "Courier New", monospace;
+    font-size: 8px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border: 1px solid currentColor;
+}
+
+.real-root .result-root-type {
+    background: rgba(44, 107, 91, 0.14);
+}
+
+.complex-root .result-root-type {
+    background: rgba(35, 82, 137, 0.14);
+}
+
+
+/* ROOT CARD COLOUR SYSTEM */
+/* REAL ROOT */
+
+.result-root-card.real-root {
+    border: 1px solid rgba(44, 107, 91, 0.45);
+    border-left: 8px solid var(--green);
+    background:
+        linear-gradient(
+            90deg,
+            rgba(44, 107, 91, 0.22),
+            rgba(255, 255, 255, 0.02)
+        );
+}
+
+.result-root-card.real-root .result-root-number {
+    background: var(--green);
+    color: var(--paper);
+}
+
+.result-root-card.real-root .result-root-number span,
+.result-root-card.real-root .result-root-number strong {
+    color: var(--paper);
+}
+
+.result-root-card.real-root .result-root-value {
+    color: var(--green);
+}
+
+.result-root-card.real-root .result-root-type {
+    color: var(--green);
+}
+
+/* COMPLEX ROOT */
+
+.result-root-card.complex-root {
+    border: 1px solid rgba(35, 82, 137, 0.45);
+    border-left: 8px solid var(--blue);
+    background:
+        linear-gradient(
+            90deg,
+            rgba(35, 82, 137, 0.22),
+            rgba(255, 255, 255, 0.02)
+        );
+}
+
+.result-root-card.complex-root .result-root-number {
+    background: var(--blue);
+    color: var(--paper);
+}
+
+.result-root-card.complex-root .result-root-number span,
+.result-root-card.complex-root .result-root-number strong {
+    color: var(--paper);
+}
+
+.result-root-card.complex-root .result-root-value {
+    color: var(--blue);
+}
+
+.result-root-card.complex-root .result-root-type {
+    color: var(--blue);
+}
+
+/* RESULT FOOTER */
+
+.solver-result-footer {
+    margin-top: 18px;
+    min-height: 82px;
+    display: grid;
+    grid-template-columns:
+        1fr
+        1fr
+        120px;
+    border: 1px solid var(--border);
+    background: var(--paper-light);
+}
+
+.result-footer-symbol {
+    display: none;
+}
+
+.result-footer-count {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 24px;
+    border-right: 1px solid var(--border);
+}
+
+.result-footer-count span {
+    margin-bottom: 7px;
+    color: var(--muted-ink);
+    font-family: "Courier New", monospace;
+    font-size: 9px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.result-footer-count strong {
+    color: var(--navy);
+    font-family: Georgia, serif;
+    font-size: 28px;
+    font-weight: normal;
+}
+
+.result-footer-status {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 18px;
+    background: var(--red);
+    color: var(--paper);
+    font-family: "Courier New", monospace;
+    font-size: 9px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+/* ERROR DISPLAY */
+
+.solution-error {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.error-symbol {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+    border: 1px solid var(--red);
+    background-color: rgba(176, 79, 64, 0.08);
+    color: var(--red);
+    font-family: Georgia, serif;
+    font-size: 28px;
+}
+
+.solution-error p {
+    max-width: 320px;
+    margin: 0;
+    color: var(--muted-ink);
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* GENERATED AIRFOIL SVG */
+
+.generated-airfoil-svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.generated-airfoil-axis {
+    stroke: var(--border);
+    stroke-width: 1;
+    stroke-dasharray: 6 6;
+}
+
+.generated-airfoil-path {
+    fill: rgba(35, 82, 137, 0.16);
+    stroke: var(--blue);
+    stroke-width: 3;
+    stroke-linejoin: round;
+}
+
+.generated-airfoil-label {
+    fill: var(--muted-ink);
+    font-family: "Courier New", monospace;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.airfoil-error {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+
+    color: var(--red);
+
+    font-family: "Courier New", monospace;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    text-align: center;
+}

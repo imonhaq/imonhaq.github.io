@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Aircraft Flight Simulator | Engineering Archive
+    </title>
+
+
+    <link
+        rel="stylesheet"
+        href="../css/main.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         PROJECT NAVIGATION
+    ====================================================== -->
+
+    <nav class="project-nav">
+
+        <a
+            href="../index.html#projects"
+            class="back-link"
+        >
+            ← RETURN TO ARCHIVE
+        </a>
+
+
+        <div class="project-nav-id">
+
+            IMH / PROJECT RECORD / 001
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- =====================================================
+         PROJECT HERO
+    ====================================================== -->
+
+    <header class="project-hero">
+
+
+        <div class="project-hero-grid">
+
+
+            <div class="project-hero-main">
+
+
+                <div class="record-label">
+
+                    PROJECT IMH-001
+
+                </div>
+
+
+                <h1>
+
+                    Aircraft<br>
+                    Flight Simulator
+
+                </h1>
+
+
+                <div class="project-hero-category">
+
+                    FLIGHT DYNAMICS / SIMULATION
+
+                </div>
+
+
+                <p class="project-hero-description">
+
+                    A longitudinal aircraft simulation environment
+                    developed to model flight dynamics and investigate
+                    aircraft behaviour through feedback control systems.
+
+                </p>
+
+
+                <div class="project-hero-status">
+
+                    <span class="status-indicator"></span>
+
+                    ACTIVE DEVELOPMENT
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- Technical information panel -->
+
+            <aside class="project-spec-panel">
+
+
+                <div class="spec-panel-header">
+
+                    SYSTEM RECORD
+
+                </div>
+
+
+                <div class="spec-row">
+
+                    <span>
+                        PLATFORM
+                    </span>
+
+                    <strong>
+                        MATLAB / Simulink
+                    </strong>
+
+                </div>
+
+
+                <div class="spec-row">
+
+                    <span>
+                        MODEL
+                    </span>
+
+                    <strong>
+                        Longitudinal Dynamics
+                    </strong>
+
+                </div>
+
+
+                <div class="spec-row">
+
+                    <span>
+                        TYPE
+                    </span>
+
+                    <strong>
+                        Flight Simulation
+                    </strong>
+
+                </div>
+
+
+                <div class="spec-row">
+
+                    <span>
+                        CONTROL
+                    </span>
+
+                    <strong>
+                        Feedback Controllers
+                    </strong>
+
+                </div>
+
+
+                <div class="spec-row">
+
+                    <span>
+                        STATUS
+                    </span>
+
+                    <strong class="active-text">
+                        Active Development
+                    </strong>
+
+                </div>
+
+
+            </aside>
+
+
+        </div>
+
+
+    </header>
+
+
+
+    <!-- =====================================================
+         PROJECT OVERVIEW
+    ====================================================== -->
+
+    <section class="project-record-section overview-section">
+
+
+        <div class="record-section-heading">
+
+            <span>
+                01
+            </span>
+
+            <h2>
+                PROJECT OVERVIEW
+            </h2>
+
+        </div>
+
+
+        <div class="overview-grid">
+
+
+            <div class="overview-main">
+
+                <p class="overview-lead">
+
+                    This project focuses on developing a longitudinal
+                    aircraft simulation capable of modelling aircraft
+                    motion and testing feedback control strategies.
+
+                </p>
+
+
+                <p>
+
+                    The simulator brings together multiple engineering
+                    components into a single simulation environment,
+                    including aircraft dynamics, atmospheric conditions
+                    and control logic. The project is being developed
+                    incrementally, with individual subsystems tested
+                    and refined before integration into the complete
+                    simulation.
+
+                </p>
+
+
+                <p>
+
+                    Current development focuses on establishing stable
+                    controller behaviour and improving the interaction
+                    between guidance commands, flight dynamics and
+                    aircraft response.
+
+                </p>
+
+
+            </div>
+
+
+            <aside class="overview-sidebar">
+
+
+                <div class="record-note">
+
+                    <span class="note-label">
+
+                        PROJECT OBJECTIVE
+
+                    </span>
+
+
+                    <p>
+
+                        Develop a functional aircraft simulation
+                        platform for studying flight dynamics and
+                        feedback control behaviour.
+
+                    </p>
+
+                </div>
+
+
+                <div class="record-note">
+
+                    <span class="note-label">
+
+                        CURRENT FOCUS
+
+                    </span>
+
+
+                    <p>
+
+                        Controller testing, response refinement and
+                        integration of the altitude control system.
+
+                    </p>
+
+                </div>
+
+
+            </aside>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =====================================================
+         SYSTEM ARCHITECTURE
+    ====================================================== -->
+
+    <section class="project-record-section architecture-section">
+
+
+        <div class="record-section-heading">
+
+            <span>
+                02
+            </span>
+
+            <h2>
+                SYSTEM ARCHITECTURE
+            </h2>
+
+        </div>
+
+
+        <p class="section-description">
+
+            The simulator is structured around interacting aircraft
+            dynamics, guidance logic and feedback control systems.
+
+        </p>
+
+
+        <div class="architecture-diagram">
+
+
+            <div class="architecture-block">
+
+                <span class="block-label">
+                    INPUT
+                </span>
+
+                Pilot / Guidance
+                Commands
+
+            </div>
+
+
+            <div class="architecture-arrow">
+
+                →
+
+            </div>
+
+
+            <div class="architecture-block">
+
+                <span class="block-label">
+                    CONTROL
+                </span>
+
+                Flight
+                Controllers
+
+            </div>
+
+
+            <div class="architecture-arrow">
+
+                →
+
+            </div>
+
+
+            <div class="architecture-block architecture-highlight">
+
+                <span class="block-label">
+                    PLANT
+                </span>
+
+                Aircraft
+                Dynamics
+
+            </div>
+
+
+            <div class="architecture-arrow">
+
+                →
+
+            </div>
+
+
+            <div class="architecture-block">
+
+                <span class="block-label">
+                    OUTPUT
+                </span>
+
+                Flight State
+                Response
+
+            </div>
+
+
+        </div>
+
+
+        <div class="figure-placeholder architecture-figure">
+
+            <div class="figure-grid"></div>
+
+
+            <div class="figure-label">
+
+                FIG. 01 — SIMULATION SYSTEM ARCHITECTURE
+
+            </div>
+
+
+            <div class="figure-content">
+
+                <img src="../images/Screenshot (85).png"
+                     alt="Gamma controller response">
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =====================================================
+         DEVELOPMENT RECORD
+    ====================================================== -->
+
+    <section class="project-record-section development-section">
+
+
+        <div class="record-section-heading">
+
+            <span>
+                03
+            </span>
+
+            <h2>
+                DEVELOPMENT RECORD
+            </h2>
+
+        </div>
+
+
+        <div class="development-timeline">
+
+
+            <article class="development-entry">
+
+
+                <div class="development-index">
+
+                    01
+
+                </div>
+
+
+                <div class="development-content">
+
+                    <span class="development-category">
+
+                        FLIGHT DYNAMICS
+
+                    </span>
+
+
+                    <h3>
+
+                        Aircraft Model Development
+
+                    </h3>
+
+
+                    <p>
+
+                        Development and integration of the aircraft
+                        longitudinal dynamics required to simulate
+                        aircraft motion and response.
+
+                    </p>
+
+                </div>
+
+
+            </article>
+
+
+
+            <article class="development-entry">
+
+
+                <div class="development-index">
+
+                    02
+
+                </div>
+
+
+                <div class="development-content">
+
+                    <span class="development-category">
+
+                        CONTROL SYSTEMS
+
+                    </span>
+
+
+                    <h3>
+
+                        Flight Path Control
+
+                    </h3>
+
+
+                    <p>
+
+                        Development and testing of feedback control
+                        systems responsible for regulating flight
+                        path behaviour and aircraft response.
+
+                    </p>
+
+                </div>
+
+
+            </article>
+
+
+
+            <article class="development-entry">
+
+
+                <div class="development-index">
+
+                    03
+
+                </div>
+
+
+                <div class="development-content">
+
+                    <span class="development-category">
+
+                        ALTITUDE CONTROL
+
+                    </span>
+
+
+                    <h3>
+
+                        Altitude Controller Integration
+
+                    </h3>
+
+
+                    <p>
+
+                        Ongoing work focused on integrating altitude
+                        control behaviour with the existing aircraft
+                        simulation and flight path control logic.
+
+                    </p>
+
+                </div>
+
+
+            </article>
+
+
+
+            <article class="development-entry current-entry">
+
+
+                <div class="development-index">
+
+                    04
+
+                </div>
+
+
+                <div class="development-content">
+
+                    <span class="development-category">
+
+                        CURRENT DEVELOPMENT
+
+                    </span>
+
+
+                    <h3>
+
+                        Controller Testing & Refinement
+
+                    </h3>
+
+
+                    <p>
+
+                        Continued testing and refinement of controller
+                        behaviour to improve response stability and
+                        overall interaction between subsystems.
+
+                    </p>
+
+                </div>
+
+
+            </article>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =====================================================
+         RESULTS
+    ====================================================== -->
+
+    <section class="project-record-section results-section">
+
+
+        <div class="record-section-heading">
+
+            <span>
+                04
+            </span>
+
+            <h2>
+                RESULTS & FIGURES
+            </h2>
+
+        </div>
+
+
+        <p class="section-description">
+
+            Selected simulation outputs and development figures
+            will be added as the simulator continues to evolve.
+
+        </p>
+
+
+        <div class="results-grid">
+
+
+            <div class="result-figure">
+
+                <div class="result-placeholder">
+
+                    RESPONSE PLOT
+                    <span>
+                        <img src="../images/Screenshot (91).png"
+                             alt="Gamma controller response">
+                    </span>
+
+                </div>
+
+
+                <p>
+
+                    Flight response and controller behaviour.
+
+                </p>
+
+            </div>
+
+
+            <div class="result-figure">
+
+                <div class="result-placeholder">
+
+                    SIMULATION OUTPUT
+                    <span>
+                        FIG. 03
+                    </span>
+
+                </div>
+
+
+                <p>
+
+                    Aircraft state and simulation response.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =====================================================
+         FUTURE DEVELOPMENT
+    ====================================================== -->
+
+    <section class="project-record-section future-section">
+
+
+        <div class="record-section-heading">
+
+            <span>
+                05
+            </span>
+
+            <h2>
+                FUTURE DEVELOPMENT
+            </h2>
+
+        </div>
+
+
+        <div class="future-grid">
+
+
+            <div class="future-item">
+
+                <span>
+                    A
+                </span>
+
+                Further controller tuning and validation.
+
+            </div>
+
+
+            <div class="future-item">
+
+                <span>
+                    B
+                </span>
+
+                Expanded simulation capabilities and subsystems.
+
+            </div>
+
+
+            <div class="future-item">
+
+                <span>
+                    C
+                </span>
+
+                Improved visualisation and simulation analysis tools.
+
+            </div>
+
+
+            <div class="future-item">
+
+                <span>
+                    D
+                </span>
+
+                Continued integration and system-level testing.
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =====================================================
+         PROJECT FOOTER
+    ====================================================== -->
+
+    <footer class="project-footer">
+
+
+        <a
+            href="../index.html#projects"
+            class="footer-return"
+        >
+
+            ← RETURN TO PROJECT ARCHIVE
+
+        </a>
+
+
+        <div>
+
+            IMH ENGINEERING ARCHIVE
+            ·
+            PROJECT IMH-001
+
+        </div>
+
+
+    </footer>
+
+
+</body>
+
+</html>

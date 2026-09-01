@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NACA Airfoil Generator | IMH Engineering Tools</title>
+
+    <link rel="stylesheet" href="../../css/main.css">
+</head>
+
+<body>
+
+<nav class="tool-nav">
+
+    <a href="../numerical-tools.html" class="back-link">
+        ← RETURN TO TOOL ARCHIVE
+    </a>
+
+    <div class="tool-nav-id">
+        TOOL IMH-NM-002
+    </div>
+
+</nav>
+
+
+<main class="tool-page">
+
+    <header class="tool-header">
+
+        <div class="tool-header-label">
+            AERODYNAMICS / GEOMETRY
+        </div>
+
+        <h1>NACA Airfoil Generator</h1>
+
+        <p>
+            Generate airfoil geometry using the NACA four-digit series.
+        </p>
+
+        <div class="tool-formula">
+            NACA MPXX
+        </div>
+
+    </header>
+
+
+    <section class="tool-workspace airfoil-workspace">
+
+        <div class="tool-input-panel">
+
+            <div class="panel-header">
+                AIRFOIL PARAMETERS
+            </div>
+
+
+            <div class="airfoil-inputs">
+
+                <div class="input-field">
+
+                    <label for="naca-number">
+                        NACA DESIGNATION
+                    </label>
+
+                    <input type="text"
+                           id="naca-number"
+                           placeholder="2412">
+
+                </div>
+
+
+                <div class="input-field">
+
+                    <label for="point-count">
+                        NUMBER OF POINTS
+                    </label>
+
+                    <input type="number"
+                           id="point-count"
+                           placeholder="100"
+                           min="20"
+                           max="500">
+
+                </div>
+
+            </div>
+
+
+            <div class="naca-reference">
+
+                <span>M</span>
+                Maximum Camber
+
+                <span>P</span>
+                Camber Position
+
+                <span>XX</span>
+                Maximum Thickness
+
+            </div>
+
+
+            <button class="tool-action-button">
+                GENERATE AIRFOIL →
+            </button>
+
+            <button class="tool-action-button secondary-button" id="download-airfoil">
+                DOWNLOAD .DAT FILE ↓
+            </button>
+
+        </div>
+
+
+        <div class="tool-output-panel">
+
+            <div class="panel-header">
+                GENERATED GEOMETRY
+            </div>
+
+
+            <div class="airfoil-placeholder">
+
+                <div class="airfoil-axis horizontal"></div>
+
+                <div class="airfoil-axis vertical"></div>
+
+                <div class="airfoil-shape">
+                    AIRFOIL PREVIEW
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="tool-information">
+
+        <div class="tool-info-block">
+
+            <span>INPUT</span>
+
+            <p>
+                Standard NACA four-digit airfoil designation.
+            </p>
+
+        </div>
+
+
+        <div class="tool-info-block">
+
+            <span>OUTPUT</span>
+
+            <p>
+                Coordinate points describing the generated airfoil
+                upper and lower surfaces.
+            </p>
+
+        </div>
+
+
+        <div class="tool-info-block">
+
+            <span>APPLICATION</span>
+
+            <p>
+                Airfoil geometry generation for aerodynamic analysis
+                and engineering visualization.
+            </p>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer class="tool-footer">
+
+    <a href="../numerical-tools.html">
+        ← RETURN TO TOOL ARCHIVE
+    </a>
+
+    <div>
+        IMH ENGINEERING TOOLS · NM-002
+    </div>
+
+</footer>
+<script src="../js/naca-generator.js"></script>
+</body>
+</html>

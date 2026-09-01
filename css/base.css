@@ -1,0 +1,180 @@
+/* =========================================================
+   IMON HAQUE — PERSONAL ENGINEERING ARCHIVE
+   Light aerospace technical publication aesthetic
+   ========================================================= */
+
+/* =========================================================
+   01. COLOUR SYSTEM
+   ========================================================= */
+
+:root {
+
+    /* Paper */
+
+    --paper: #f6f0e3;
+    --paper-light: #fffaf0;
+    --paper-blue: #e7eff2;
+
+    /* Ink */
+
+    --ink: #1f2933;
+    --muted-ink: #59636b;
+
+    /* Technical colours */
+
+    --navy: #193a5a;
+    --blue: #3e7c9a;
+    --sky: #9fc7d6;
+
+    --red: #b4463d;
+    --orange: #c9792d;
+
+    --green: #557c6f;
+
+    --yellow: #d6ae48;
+
+    /* Structural */
+
+    --grid: #d6d0c3;
+    --border: #34404a;
+
+}
+
+/* =========================================================
+   02. RESET
+   ========================================================= */
+
+* {
+
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+body {
+
+    background-color: var(--paper);
+
+    color: var(--ink);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    line-height: 1.6;
+
+}
+
+a {
+
+    color: inherit;
+
+}
+
+/* =========================================================
+   05. GENERAL SECTION
+   ========================================================= */
+
+.section {
+
+    padding: 120px 8%;
+
+    border-bottom: 1px solid var(--border);
+
+    position: relative;
+
+}
+
+.section-header {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    margin-bottom: 40px;
+
+}
+
+.section-number {
+
+    width: 45px;
+
+    height: 45px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background-color: var(--red);
+
+    color: var(--paper-light);
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+}
+
+.section h2 {
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    color: var(--navy);
+
+}
+
+.section-intro {
+
+    max-width: 700px;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    color: var(--muted-ink);
+
+    margin-bottom: 50px;
+
+}
+
+/* =========================================================
+   TYPOGRAPHY TUNING — READABILITY PASS
+   ========================================================= */
+
+body {
+    font-size: 17px;
+}
+
+.section-number {
+    font-size: 14px;
+}
+
+.section-header .section-number,
+.section-number {
+    font-size: 14px;
+}

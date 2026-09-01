@@ -1,0 +1,739 @@
+/* =========================================================
+   04. HERO
+   ========================================================= */
+
+.hero {
+
+    min-height: calc(100vh - 72px);
+
+    padding: 80px 8% 35px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background-color: var(--paper);
+
+    /* Technical grid */
+
+    background-image:
+
+        linear-gradient(
+            rgba(62, 124, 154, 0.12) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(62, 124, 154, 0.12) 1px,
+            transparent 1px
+        );
+
+    background-size: 45px 45px;
+
+}
+
+/* Large decorative circle */
+
+.hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 700px;
+
+    height: 700px;
+
+    border: 1px solid var(--sky);
+
+    border-radius: 50%;
+
+    right: -250px;
+
+    top: -180px;
+
+    opacity: 0.5;
+
+}
+
+/* Red reference line */
+
+.hero::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 3px;
+
+    height: 75%;
+
+    left: 5%;
+
+    top: 10%;
+
+    background-color: var(--red);
+
+}
+
+.hero-grid {
+
+    max-width: 1400px;
+
+    margin: auto;
+
+    min-height: 720px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1.2fr;
+
+    gap: 70px;
+
+    align-items: center;
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+/* =========================================================
+   HERO TEXT
+   ========================================================= */
+
+.hero-content {
+
+    padding-left: 40px;
+
+}
+
+.subtitle {
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    color: var(--red);
+
+    margin-bottom: 30px;
+
+}
+
+.hero h1 {
+
+    font-size: clamp(72px, 9vw, 150px);
+
+    font-weight: normal;
+
+    line-height: 0.78;
+
+    letter-spacing: -6px;
+
+    color: var(--navy);
+
+    margin-bottom: 45px;
+
+    position: relative;
+
+}
+
+/* Orange line */
+
+.hero h1::after {
+
+    content: "";
+
+    display: block;
+
+    width: 160px;
+
+    height: 6px;
+
+    background-color: var(--orange);
+
+    margin-top: 40px;
+
+}
+
+.description {
+
+    max-width: 560px;
+
+    font-size: 19px;
+
+    line-height: 1.7;
+
+    color: var(--muted-ink);
+
+    margin-bottom: 38px;
+
+}
+
+/* =========================================================
+   BUTTON
+   ========================================================= */
+
+.button {
+
+    display: inline-block;
+
+    padding: 15px 25px;
+
+    background-color: var(--navy);
+
+    color: var(--paper-light);
+
+    border: 2px solid var(--navy);
+
+    text-decoration: none;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 1.5px;
+
+    transition: all 0.2s ease;
+
+}
+
+.button:hover {
+
+    background-color: var(--orange);
+
+    border-color: var(--orange);
+
+    transform: translateY(-3px);
+
+}
+
+/* =========================================================
+   AIRCRAFT PANEL
+   ========================================================= */
+
+.aircraft-panel {
+
+    background-color: var(--transparent);
+
+    /*border: 2px solid var(--navy);*/
+
+    padding: 25px;
+
+    position: relative;
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    /*box-shadow: 12px 12px 0 var(--sky);*/
+
+    height: auto;
+    width: 100%;
+
+    position: relative;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    overflow: hidden;
+
+    transform: translateY(-80px);
+    transform: translateX(40px);
+
+}
+
+/* Aircraft figure label */
+
+.aircraft-label {
+
+    display: flex;
+
+    align-items: center;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    color: var(--red);
+
+    border-bottom: 1px solid var(--grid);
+
+    padding-bottom: 12px;
+
+}
+
+.aircraft-label span {
+
+    color: var(--blue);
+
+    font-weight: normal;
+
+}
+
+/* Aircraft placeholder */
+
+.aircraft-placeholder {
+
+    height: 400px;
+
+    position: relative;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    overflow: hidden;
+
+}
+
+.hero-aircraft-image {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+    display: block;
+
+}
+
+/* Aircraft data */
+
+.aircraft-data {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 10px;
+
+    border-top: 1px solid var(--grid);
+
+    padding-top: 12px;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+
+    color: var(--green);
+
+}
+
+/* =========================================================
+   HERO FOOTER
+   ========================================================= */
+
+.hero-footer {
+
+    max-width: 1400px;
+
+    margin: 25px auto 0;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    border-top: 1px solid var(--border);
+
+    padding-top: 14px;
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+.hero-footer span {
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    color: var(--navy);
+
+}
+
+/* =========================================================
+   06. ABOUT
+   ========================================================= */
+
+.about-section {
+
+    background-color: var(--paper-light);
+
+}
+
+.about-section::after {
+
+    content: "01";
+
+    position: absolute;
+
+    right: 8%;
+
+    top: 70px;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 150px;
+
+    font-weight: bold;
+
+    color: var(--sky);
+
+    opacity: 0.2;
+
+}
+
+.about-layout {
+
+    max-width: 1200px;
+
+    display: grid;
+
+    grid-template-columns: 1.3fr 0.7fr;
+
+    gap: 90px;
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+.about-main {
+
+    max-width: 700px;
+
+}
+
+.about-main p {
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    color: var(--muted-ink);
+
+    margin-bottom: 25px;
+
+}
+
+.about-main .about-intro {
+
+    font-size: 28px;
+
+    line-height: 1.4;
+
+    color: var(--navy);
+
+}
+
+/* About data panel */
+
+.about-data {
+
+    border-left: 3px solid var(--orange);
+
+    padding-left: 30px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 28px;
+
+}
+
+.about-data div {
+
+    display: flex;
+
+    flex-direction: column;
+
+    font-size: 16px;
+
+    color: var(--ink);
+
+}
+
+.about-data span {
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 10px;
+
+    letter-spacing: 1.5px;
+
+    color: var(--red);
+
+    margin-bottom: 5px;
+
+}
+
+/* =========================================================
+   08. TECHNICAL TOOLKIT
+   ========================================================= */
+
+.skills-section {
+
+    background-color: var(--paper);
+
+}
+
+.skills-container {
+
+    max-width: 1100px;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+}
+
+.skills-container span {
+
+    padding: 14px 20px;
+
+    background-color: var(--paper-light);
+
+    border: 1px solid var(--border);
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    color: var(--navy);
+
+    transition:
+
+        transform 0.2s ease,
+        background-color 0.2s ease,
+        color 0.2s ease;
+
+}
+
+.skills-container span:nth-child(4n + 1) {
+
+    border-color: var(--blue);
+
+}
+
+.skills-container span:nth-child(4n + 2) {
+
+    border-color: var(--orange);
+
+}
+
+.skills-container span:nth-child(4n + 3) {
+
+    border-color: var(--green);
+
+}
+
+.skills-container span:nth-child(4n + 4) {
+
+    border-color: var(--red);
+
+}
+
+.skills-container span:hover {
+
+    background-color: var(--navy);
+
+    color: var(--paper-light);
+
+    transform: translateY(-4px);
+
+}
+
+/* =========================================================
+   09. CONTACT
+   ========================================================= */
+
+.contact-section {
+
+    background-color: var(--navy);
+
+}
+
+.contact-section h2 {
+
+    color: var(--paper-light);
+
+}
+
+.contact-section .section-number {
+
+    background-color: var(--orange);
+
+}
+
+.contact-layout {
+
+    max-width: 1200px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 100px;
+
+    align-items: start;
+
+}
+
+.contact-main {
+
+    font-size: 32px;
+
+    line-height: 1.4;
+
+    color: var(--paper-light);
+
+}
+
+.contact-data {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+.contact-data a {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 18px 0;
+
+    border-bottom: 1px solid rgba(255, 250, 240, 0.3);
+
+    text-decoration: none;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    color: var(--sky);
+
+    transition: all 0.2s ease;
+
+}
+
+.contact-data a:hover {
+
+    color: var(--yellow);
+
+    padding-left: 12px;
+
+}
+
+.contact-data span {
+
+    font-size: 20px;
+
+}
+
+/* =========================================================
+   10. FOOTER
+   ========================================================= */
+
+footer {
+
+    background-color: var(--ink);
+
+    color: var(--paper);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 20px 8%;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+}
+
+/* =========================================================
+   TYPOGRAPHY TUNING — READABILITY PASS
+   ========================================================= */
+
+.subtitle { font-size: 13px; }
+.hero-button { font-size: 12px; }
+.aircraft-label { font-size: 12px; }
+.aircraft-data { font-size: 10px; }
+.hero-footer span { font-size: 11px; }
+.about-data span { font-size: 11px; }
+.skills-container span { font-size: 12px; }
+.contact-links a { font-size: 14px; }
+.site-footer { font-size: 11px; }

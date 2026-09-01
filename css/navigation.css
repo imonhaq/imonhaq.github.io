@@ -1,0 +1,95 @@
+/* =========================================================
+   03. NAVIGATION
+   ========================================================= */
+
+nav {
+
+    height: 72px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 0 7%;
+
+    background-color: rgba(255, 250, 240, 0.96);
+
+    border-bottom: 2px solid var(--navy);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+}
+
+.logo {
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    letter-spacing: 1.5px;
+
+    color: var(--navy);
+
+}
+
+.logo span {
+
+    color: var(--red);
+
+    font-weight: normal;
+
+}
+
+.nav-links {
+
+    display: flex;
+
+    gap: 28px;
+
+}
+
+.nav-links a {
+
+    text-decoration: none;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+    color: var(--ink);
+
+    transition: color 0.2s ease;
+
+}
+
+.nav-links a:hover {
+
+    color: var(--red);
+
+}
+
+/* =========================================================
+   TYPOGRAPHY TUNING
+   ========================================================= */
+
+.nav-links a {
+    font-size: 12px;
+}

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Jacobi Iterative Solver | IMH Engineering Tools</title>
+
+    <link rel="stylesheet" href="../../css/main.css">
+</head>
+
+<body>
+
+<nav class="tool-nav">
+
+    <a href="../numerical-tools.html" class="back-link">
+        ← RETURN TO TOOL ARCHIVE
+    </a>
+
+    <div class="tool-nav-id">
+        TOOL IMH-NM-003
+    </div>
+
+</nav>
+
+
+<main class="tool-page">
+
+    <header class="tool-header">
+
+        <div class="tool-header-label">
+            NUMERICAL METHODS
+        </div>
+
+        <h1>Jacobi Iterative Solver</h1>
+
+        <p>
+            Solve systems of linear equations using iterative numerical methods.
+        </p>
+
+        <div class="tool-formula">
+            Ax + By + Cz = b
+        </div>
+
+    </header>
+
+
+    <section class="tool-workspace jacobi-workspace">
+
+        <div class="tool-input-panel">
+
+            <div class="panel-header">
+                MATRIX INPUT
+            </div>
+
+
+            <div class="matrix-placeholder">
+
+                <div class="matrix-row">
+
+                    <input type="number" placeholder="a₁₁">
+                    <input type="number" placeholder="a₁₂">
+                    <input type="number" placeholder="a₁₃">
+
+                </div>
+
+
+                <div class="matrix-row">
+
+                    <input type="number" placeholder="a₂₁">
+                    <input type="number" placeholder="a₂₂">
+                    <input type="number" placeholder="a₂₃">
+
+                </div>
+
+
+                <div class="matrix-row">
+
+                    <input type="number" placeholder="a₃₁">
+                    <input type="number" placeholder="a₃₂">
+                    <input type="number" placeholder="a₃₃">
+
+                </div>
+
+            </div>
+
+
+            <div class="jacobi-options">
+
+                <div class="input-field">
+
+                    <label>TOLERANCE</label>
+
+                    <input type="number"
+                           placeholder="0.0001">
+
+                </div>
+
+
+                <div class="input-field">
+
+                    <label>MAX ITERATIONS</label>
+
+                    <input type="number"
+                           placeholder="100">
+
+                </div>
+
+            </div>
+
+
+            <button class="tool-action-button">
+                RUN ITERATION →
+            </button>
+
+        </div>
+
+
+        <div class="tool-output-panel">
+
+            <div class="panel-header">
+                ITERATION OUTPUT
+            </div>
+
+
+            <div class="output-placeholder">
+
+                <div class="output-symbol">
+                    J
+                </div>
+
+                <p>
+                    Enter a coefficient matrix and start the iteration.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="tool-information">
+
+        <div class="tool-info-block">
+
+            <span>METHOD</span>
+
+            <p>
+                Iterative solution of linear systems using the
+                Jacobi numerical method.
+            </p>
+
+        </div>
+
+
+        <div class="tool-info-block">
+
+            <span>CONVERGENCE</span>
+
+            <p>
+                Solution accuracy is controlled using a specified
+                convergence tolerance.
+            </p>
+
+        </div>
+
+
+        <div class="tool-info-block">
+
+            <span>OUTPUT</span>
+
+            <p>
+                Approximate solution vector and iteration
+                convergence information.
+            </p>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer class="tool-footer">
+
+    <a href="../numerical-tools.html">
+        ← RETURN TO TOOL ARCHIVE
+    </a>
+
+    <div>
+        IMH ENGINEERING TOOLS · NM-003
+    </div>
+
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polynomial Roots Solver | IMH Engineering Tools</title>
+    <link rel="stylesheet" href="../../css/main.css">
+</head>
+
+<body>
+<nav class="tool-nav">
+    <a href="../numerical-tools.html" class="back-link">
+        ← RETURN TO TOOL ARCHIVE
+    </a>
+    <div class="tool-nav-id">
+        TOOL IMH-NM-001
+    </div>
+</nav>
+
+<main class="tool-page">
+    <header class="tool-header">
+        <div class="tool-header-label">
+            ANALYTICAL / NUMERICAL
+        </div>
+
+        <h1>Polynomial Roots Solver</h1>
+
+        <p>
+            Solve polynomial equations of the form
+        </p>
+
+        <div class="tool-formula">
+            ax³ + bx² + cx + d = 0
+        </div>
+    </header>
+
+    <section class="tool-workspace">
+        <div class="tool-input-panel">
+            <div class="panel-header">
+                INPUT PARAMETERS
+            </div>
+
+            <div class="input-grid">
+                <div class="input-field">
+                    <label for="coefficient-a">COEFFICIENT <span class="coef-letter">a</span></label>
+                    <input type="text" id="coefficient-a" placeholder="Enter Value">
+                </div>
+
+                <div class="input-field">
+                    <label for="coefficient-b">COEFFICIENT <span class="coef-letter">b</span></label>
+                    <input type="text" id="coefficient-b" placeholder="Enter Value">
+                </div>
+
+                <div class="input-field">
+                    <label for="coefficient-c">COEFFICIENT <span class="coef-letter">c</span></label>
+                    <input type="text" id="coefficient-c" placeholder="Enter Value">
+                </div>
+
+                <div class="input-field">
+                    <label for="coefficient-d">COEFFICIENT <span class="coef-letter">d</span></label>
+                    <input type="text" id="coefficient-d" placeholder="Enter Value">
+                </div>
+            </div>
+
+            <button class="tool-action-button" id="solve-button">
+                SOLVE EQUATION →
+            </button>
+        </div>
+
+        <div class="tool-output-panel">
+            <div class="panel-header">
+                SOLUTION OUTPUT
+            </div>
+
+            <div class="output-placeholder" id="solution-output">
+                <div class="output-placeholder-symbol">
+                    Σ
+                </div>
+
+                <div class="output-placeholder-content">
+                    <span>AWAITING INPUT</span>
+                        <p>
+                            Enter the polynomial coefficients and run the solver to compute the roots.
+                        </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="tool-information">
+        <div class="tool-info-block">
+            <span>METHOD</span>
+
+            <p>
+                Analytical polynomial solution with support for
+                linear, quadratic and cubic equations.
+            </p>
+        </div>
+
+        <div class="tool-info-block">
+            <span>ROOT TYPES</span>
+
+            <p>
+                Real and complex roots depending on the
+                discriminant of the equation.
+            </p>
+        </div>
+
+        <div class="tool-info-block">
+            <span>IMPLEMENTATION</span>
+
+            <p>
+                Interactive browser implementation based on the
+                original computational solver.
+            </p>
+        </div>
+    </section>
+</main>
+
+<footer class="tool-footer">
+    <a href="../../index.html">
+        ← RETURN TO HOME
+    </a>
+
+    <div>
+        IMH ENGINEERING TOOLS · NM-001
+    </div>
+</footer>
+<script src="../js/cubic-solver.js"></script>
+</body>
+</html>
